@@ -4,6 +4,7 @@
 async function loadImages(category) {
   //var category = 'A2'
   const filePath = `products/${category}.txt`;
+  const filePath2 = `products/${category}info.txt`;
   try {
     // Fetch the file
     const response = await fetch(filePath);
