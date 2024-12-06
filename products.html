@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>力京實業-竹童玩：大宗DIY客製開發│禮贈品│古早童玩│雷射竹木製商品│客製陶瓷│手工皂│蝶谷巴特│布類DIY</title>
+	<title>力京實業：大宗DIY客製開發│禮贈品│古早童玩│雷射竹木製商品│客製陶瓷│手工皂│蝶谷巴特│布類DIY</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -73,7 +73,7 @@
 							<li><a href="products.html?paint">彩繪顏料/用具</a></li>
 							<li><a href="products.html?flower">乾花/押花</a></li>
 							<li><a href="products.html?butterfly">蝶谷巴特專區</a></li>
-							<li><a href="products.html?mould">手工皂模/蠟燭</a></li>
+							<li><a href="products.html?soap">手工皂模/蠟燭</a></li>
 							<li><a href="products.html?fragrance">薰香專區</a></li>
 							<li><a href="products.html?diy">DIY 配件</a></li>
 							<li><a href="products.html?other">其他</a></li>
@@ -205,7 +205,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 
@@ -239,8 +239,73 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 	<script src="js/productlist.js"></script>
 	<script>
 		var queryString = decodeURIComponent(window.location.search);
+		let categoryname="";
 		queryString = queryString.substring(1);
 		loadImages(queryString);
+		switch(queryString){
+		case "bamboo":
+			categoryname = "-竹童玩";
+		break;
+		case "wood":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "cloth":
+			categoryname = "-布類製品";
+		break;
+		case "paper":
+			categoryname = "-紙類製品";
+		break;
+		case "glass":
+			categoryname = "-玻璃類製品";
+		break;
+		case "ceramic":
+			categoryname = "-彩繪陶瓷";
+		break;
+		case "paint":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "flower":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "butterfly":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "soap":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "fragrance":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "diy":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "other":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "custom":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "finished":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "nature":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "festival":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "holiday":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		case "newyears":
+			categoryname = "-木製-筆筒&置物架";
+		break;
+		
+		
+		
+		
+		
+		document.title = `力京實業${categoryname}：大宗DIY客製開發│禮贈品│古早童玩│雷射竹木製商品│客製陶瓷│手工皂│蝶谷巴特│布類DIY`;
 	</script>
 	<!-- Lightbox -->
 	<script src="lightbox/js/lightbox.js"></script>
