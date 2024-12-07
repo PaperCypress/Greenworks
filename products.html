@@ -65,7 +65,7 @@
 					<li><h7>DIY類</h7>
 						<ul style="columns: 2;" >
 							<li><a href="products.html?bamboo">竹童玩</a></li>
-							<li><a href="products.html?wood">木製品</a></li>
+							<li><a href="products.html?wood_box">木製品</a></li>
 							<li><a href="products.html?cloth">布類製品</a></li>
 							<li><a href="products.html?paper">紙類製品</a></li>
 							<li><a href="products.html?glass">玻璃類</a></li>
@@ -122,9 +122,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 					<div class="row">
 						<div class="col-md-8 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							
-							<h2 class="colorlib-heading">竹童玩DIY</h2>
-							<span class="heading-meta">本頁商品除竹扇、竹片書籤外，均販售材料包，需自行組裝黏貼</span>
-							<span class="heading-meta">商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢</span>
+							<h2 class="colorlib-heading" id="header">竹童玩DIY</h2>
+							<span class="heading-meta" id="description">本頁商品除竹扇、竹片書籤外，均販售材料包，需自行組裝黏貼<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<ul class="pagination" id="subcategory">
+								<li data-category="wood_box" data-group="wood"><a href="products.html?wood_box">筆筒/置物架</a></li>
+								<li data-category="wood_flat" data-group="wood"><a href="products.html?wood_flat">冰箱貼</a></li>
+								<li data-category="wood_card" data-group="wood"><a href="products.html?wood_card">祈福木片/明信片</a></li>
+								<li data-category="wood_toy" data-group="wood"><a href="products.html?wood_toy">科學玩具/童玩</a></li>
+								<li data-category="wood_frame" data-group="wood"><a href="products.html?wood_frame">相框/其他</a></li>
+								<li data-category="wood_craft" data-group="wood"><a href="products.html?wood_craft">精緻木作</a></li>
+								<li data-category="ceramic" data-group="ceramicmosaic"><a href="products.html?ceramic">彩繪陶瓷</a></li>
+								<li data-category="mosaic" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
+
+							</ul>
 						</div>
 					</div>
 					<!---<div class="row">
@@ -240,72 +254,126 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 	<script>
 		var queryString = decodeURIComponent(window.location.search);
 		let categoryname="";
+		let header="商品列表";
+		let paragraph = "";
+		let grouptype = "";
 		queryString = queryString.substring(1);
 		loadImages(queryString);
 		switch(queryString){
 		case "bamboo":
 			categoryname = "-竹童玩";
+			header = "竹童玩DIY";
+			paragraph = "本頁商品除竹扇、竹片書籤外，均販售材料包，需自行組裝黏貼<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
 		break;
-		case "wood":
+		case "wood_box":
 			categoryname = "-木製-筆筒&置物架";
+			header = "木製DIY商品-筆筒/置物架";
+			paragraph = "本頁商品皆以材料包方式出貨，需自行組裝及繪製";
+			grouptype = "wood";
+		break;
+		case "wood_flat":
+			categoryname = "-木製-冰箱貼/時鐘";
+			header = "木製DIY商品-冰箱貼/時鐘";
+			paragraph = "本頁商品皆以材料包方式出貨，需自行組裝及繪製";
+			grouptype = "wood";
+		break;
+		case "wood_card":
+			categoryname = "-祈福木片/明信片";
+			header = "木製DIY商品-祈福木片/明信片";
+			paragraph = "歡迎來圖訂製，打造專屬特色商品/贈品<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
+			grouptype = "wood";
 		break;
 		case "cloth":
 			categoryname = "-布類製品";
+			header = "彩繪陶瓷DIY/馬賽克磚DIY";
+			paragraph = "本頁商品出貨皆為「白底素胚」，需自行彩繪上色<br>陶瓷品皆可客製吉祥物、造型，如有需要可來電洽詢<br>撲滿、筆筒、花盆、公仔、風鈴...皆可客製";
 		break;
 		case "paper":
 			categoryname = "-紙類製品";
+			header = "彩繪陶瓷DIY/馬賽克磚DIY";
+			paragraph = "本頁商品出貨皆為「白底素胚」，需自行彩繪上色<br>陶瓷品皆可客製吉祥物、造型，如有需要可來電洽詢<br>撲滿、筆筒、花盆、公仔、風鈴...皆可客製";
 		break;
 		case "glass":
 			categoryname = "-玻璃類製品";
+			header = "玻璃類製品";
+			paragraph = "部分商品均附軟木塞，除大牛奶瓶需另外加購軟木塞/塑膠蓋<br>如有需其他種類玻璃瓶、玻璃類製品可來電洽詢<br>玻璃為易碎品，本公司出貨前均會拆箱檢驗，因為送容易造成破裂，恕不拆賣";
 		break;
 		case "ceramic":
 			categoryname = "-彩繪陶瓷";
+			header = "彩繪陶瓷DIY/馬賽克磚DIY";
+			paragraph = "本頁商品出貨皆為「白底素胚」，需自行彩繪上色<br>陶瓷品皆可客製吉祥物、造型，如有需要可來電洽詢<br>撲滿、筆筒、花盆、公仔、風鈴...皆可客製";
+			grouptype = "ceramicmosiac";
 		break;
+		case "mosiac":
+			categoryname = "-馬賽克";
+			header = "彩繪陶瓷DIY/馬賽克磚DIY";
+			paragraph = "本頁商品出貨皆為「白底素胚」，需自行彩繪上色<br>陶瓷品皆可客製吉祥物、造型，如有需要可來電洽詢<br>撲滿、筆筒、花盆、公仔、風鈴...皆可客製";
+			grouptype = "ceramicmosiac";
+			break;
 		case "paint":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-彩繪顏料/用具";
+			header = "DIY彩繪顏料/彩繪用具";
 		break;
 		case "flower":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-乾花/押花";
+			header = "乾花/押花";
+			paragraph = "因季節與產季不同，可來電洽詢花種<br>乾花/押花屬於脆弱商品偶爾有少數量的花瓣掉落屬正常現象";
 		break;
 		case "butterfly":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-蝶谷巴特專區";
 		break;
 		case "soap":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-手工皂模/蠟燭";
 		break;
 		case "fragrance":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-薰香專區";
 		break;
 		case "diy":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-DIY配件/工具";
 		break;
 		case "other":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-其他DIY";
 		break;
 		case "custom":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-客製化專區";
 		break;
 		case "finished":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-成品/禮贈品專區";
 		break;
 		case "nature":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-桐花/螢火蟲季";
 		break;
 		case "festival":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-中秋節DIY/端午節DIY";
 		break;
 		case "holiday":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-聖誕節DIY/萬聖節DIY/復活節DIY";
 		break;
 		case "newyears":
-			categoryname = "-木製-筆筒&置物架";
+			categoryname = "-新年/日式";
 		break;
+		}
 		
 		
 		
 		
-		
-		document.title = `力京實業${categoryname}：大宗DIY客製開發│禮贈品│古早童玩│雷射竹木製商品│客製陶瓷│手工皂│蝶谷巴特│布類DIY`;
+		document.title = `力京實業${categoryname}`;
+		document.getElementById('header').innerHTML=header;
+		document.getElementById('description').innerHTML=paragraph;
+		const children = document.getElementById("subcategory").children;
+		$("#subcategory").children().each(function() 
+        { 
+            console.log(categoryname);
+			console.log(this.dataset.category);
+    		if(grouptype!=this.dataset.group){
+				this.classList.add("hidden");
+			}
+			if(queryString	==this.dataset.category){
+				this.classList.add("active");
+				
+			}
+        }); 
+
 	</script>
 	<!-- Lightbox -->
 	<script src="lightbox/js/lightbox.js"></script>
