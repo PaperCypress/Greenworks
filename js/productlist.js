@@ -26,7 +26,13 @@ async function loadImages(category) {
     var count=0;
     let currentRow;
     images.forEach(image => {
-
+      if(image.name=="headerblock"){
+        
+          //count =0 force new row
+      }
+      else{
+        
+      
       const newBlock = document.createElement("div");
       newBlock.className = "col-md-2 col-sm-6 animate-box";
       newBlock.setAttribute("data-animate-effect", "fadeInLeft");
@@ -55,11 +61,15 @@ async function loadImages(category) {
   }
     currentRow.appendChild(newBlock);
     count++;
+    }//end else
+
+
     });
+
     window.contentWayPoint();
-  } catch (error) {
-    console.error('Error loading images:', error);
-  }
+    } catch (error) {
+        console.error('Error loading images:', error);
+        }
 }
 
 // Call the function to load images

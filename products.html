@@ -57,10 +57,10 @@
 			<h1 id="colorlib-logo"><a href="index.html">力京實業</a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
-					<li><a href="#news">最新消息</a></li>
-					<li><a href="#about">關於我們</a></li>
+					<li><a href="index.html#news">最新消息</a></li>
+					<li><a href="index.html#about">關於我們</a></li>
 					<li><a href="contact.html">聯絡我們</a></li>
-					<li><a href="#products">新品介紹</a></li>
+					<li><a href="index.html#products">新品介紹</a></li>
 					<div id="productnav" style="height: 50vh;overflow-y: scroll;">
 					<li><h7>DIY類</h7>
 						<ul style="columns: 2;" >
@@ -130,7 +130,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<ul class="pagination" id="subcategory">
 								<li data-category="wood_box" data-group="wood"><a href="products.html?wood_box">筆筒/置物架</a></li>
-								<li data-category="wood_flat" data-group="wood"><a href="products.html?wood_flat">冰箱貼</a></li>
+								<li data-category="wood_flat" data-group="wood"><a href="products.html?wood_flat">冰箱貼/時鐘</a></li>
 								<li data-category="wood_card" data-group="wood"><a href="products.html?wood_card">祈福木片/明信片</a></li>
 								<li data-category="wood_toy" data-group="wood"><a href="products.html?wood_toy">科學玩具/童玩</a></li>
 								<li data-category="wood_frame" data-group="wood"><a href="products.html?wood_frame">相框/其他</a></li>
@@ -283,6 +283,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 			paragraph = "歡迎來圖訂製，打造專屬特色商品/贈品<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
 			grouptype = "wood";
 		break;
+		case "wood_toy":
+			categoryname = "-祈福木片/明信片";
+			header = "木製DIY商品-祈福木片/明信片";
+			paragraph = "歡迎來圖訂製，打造專屬特色商品/贈品<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
+			grouptype = "wood";
+		break;
+		case "wood_frame":
+			categoryname = "-祈福木片/明信片";
+			header = "木製DIY商品-祈福木片/明信片";
+			paragraph = "歡迎來圖訂製，打造專屬特色商品/贈品<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
+			grouptype = "wood";
+		break;
+		case "wood_craft":
+			categoryname = "-祈福木片/明信片";
+			header = "木製DIY商品-祈福木片/明信片";
+			paragraph = "歡迎來圖訂製，打造專屬特色商品/贈品<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
+			grouptype = "wood";
+		break;
 		case "cloth":
 			categoryname = "-布類製品";
 			header = "彩繪陶瓷DIY/馬賽克磚DIY";
@@ -300,15 +318,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 		break;
 		case "ceramic":
 			categoryname = "-彩繪陶瓷";
-			header = "彩繪陶瓷DIY/馬賽克磚DIY";
+			header = "彩繪陶瓷DIY";
 			paragraph = "本頁商品出貨皆為「白底素胚」，需自行彩繪上色<br>陶瓷品皆可客製吉祥物、造型，如有需要可來電洽詢<br>撲滿、筆筒、花盆、公仔、風鈴...皆可客製";
-			grouptype = "ceramicmosiac";
+			grouptype = "ceramicmosaic";
 		break;
-		case "mosiac":
+		case "mosaic":
 			categoryname = "-馬賽克";
-			header = "彩繪陶瓷DIY/馬賽克磚DIY";
-			paragraph = "本頁商品出貨皆為「白底素胚」，需自行彩繪上色<br>陶瓷品皆可客製吉祥物、造型，如有需要可來電洽詢<br>撲滿、筆筒、花盆、公仔、風鈴...皆可客製";
-			grouptype = "ceramicmosiac";
+			header = "馬賽克磚DIY";
+			paragraph = "撲滿、筆筒、花盆、公仔、風鈴...皆可客製，歡迎來圖訂製<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
+			grouptype = "ceramicmosaic";
 			break;
 		case "paint":
 			categoryname = "-彩繪顏料/用具";
@@ -321,6 +339,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 		break;
 		case "butterfly":
 			categoryname = "-蝶谷巴特專區";
+			header = "DIY蝶谷巴特專區";
+			paragraph = "如需其他造型蝶谷巴特專用紙可電洽<br>商品 蝶谷巴特配件，均販售素色商品，需另購蝶谷巴特紙、膠";
 		break;
 		case "soap":
 			categoryname = "-手工皂模/蠟燭";
