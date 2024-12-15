@@ -436,7 +436,7 @@ body.offcanvas {
 .colorlib-services,
 .colorlib-contact {
   padding-top: 4em;
-  padding-bottom: 9em;
+  padding-bottom: 1em;
   clear: both;
   width: 100%;
   display: block; }
@@ -447,7 +447,7 @@ body.offcanvas {
     .colorlib-services,
     .colorlib-contact {
       padding-top: 5em;
-      padding-bottom: 8em; } }
+      padding-bottom: 1em; } }
 
 .about-img,
 .about-img-2,
@@ -472,7 +472,7 @@ body.offcanvas {
     width: 60px;
     height: 4px;
     content: '';
-    background: #FFC300; }
+    background: #9F8779; }
   .colorlib-heading span {
     display: block; }
   @media screen and (max-width: 768px) {

@@ -26,9 +26,18 @@ async function loadImages(category) {
     var count=0;
     let currentRow;
     images.forEach(image => {
-      if(image.name=="headerblock"){
-        
-          //count =0 force new row
+      if(image.name=="header"){
+        const newBlock = document.createElement("div");  
+        newBlock.className = "row";
+        newBlock.innerHTML = `
+        <div class="col-md-8 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							
+							<h2 class="colorlib-heading">${image.path}</h2>
+						</div>
+      `;
+      container.appendChild(newBlock);
+      container.insertBefore(newBlock,pages);
+      count = 0;
       }
       else{
         

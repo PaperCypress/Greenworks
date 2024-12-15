@@ -137,7 +137,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 								<li data-category="wood_craft" data-group="wood"><a href="products.html?wood_craft">精緻木作</a></li>
 								<li data-category="ceramic" data-group="ceramicmosaic"><a href="products.html?ceramic">彩繪陶瓷</a></li>
 								<li data-category="mosaic" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
-
+								<li data-category="nature" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
+								<li data-category="festival" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
+								<li data-category="holiday" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
+								<li data-category="newyears" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
 							</ul>
 						</div>
 					</div>
@@ -284,32 +287,32 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 			grouptype = "wood";
 		break;
 		case "wood_toy":
-			categoryname = "-祈福木片/明信片";
-			header = "木製DIY商品-祈福木片/明信片";
-			paragraph = "歡迎來圖訂製，打造專屬特色商品/贈品<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
+			categoryname = "-科學玩具/童玩";
+			header = "木製DIY商品-科學玩具/童玩";
+			paragraph = "本頁商品皆以材料包方式出貨，需自行組裝及繪製<br>部分商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
 			grouptype = "wood";
 		break;
 		case "wood_frame":
-			categoryname = "-祈福木片/明信片";
-			header = "木製DIY商品-祈福木片/明信片";
+			categoryname = "-相框/其他";
+			header = "木製DIY商品-相框/其他";
 			paragraph = "歡迎來圖訂製，打造專屬特色商品/贈品<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
 			grouptype = "wood";
 		break;
 		case "wood_craft":
-			categoryname = "-祈福木片/明信片";
-			header = "木製DIY商品-祈福木片/明信片";
-			paragraph = "歡迎來圖訂製，打造專屬特色商品/贈品<br>商品可客製LOGO或吉祥物、造型，如有需要可來電洽詢";
+			categoryname = "-精緻木作";
+			header = "木製DIY商品-精緻木作";
+			paragraph = "本頁商品除豆腐模外，皆為訂購客製品";
 			grouptype = "wood";
 		break;
 		case "cloth":
 			categoryname = "-布類製品";
-			header = "彩繪陶瓷DIY/馬賽克磚DIY";
-			paragraph = "本頁商品出貨皆為「白底素胚」，需自行彩繪上色<br>陶瓷品皆可客製吉祥物、造型，如有需要可來電洽詢<br>撲滿、筆筒、花盆、公仔、風鈴...皆可客製";
+			header = "布類DIY商品";
+			paragraph = "部分商品可客製LOGO或圖案、造型，如有需要可來電洽詢<br>本頁商品均以素色/材料包方式出售，如需另外印刷、織標、配件材料包，請另外來電詢問/購買";
 		break;
 		case "paper":
 			categoryname = "-紙類製品";
-			header = "彩繪陶瓷DIY/馬賽克磚DIY";
-			paragraph = "本頁商品出貨皆為「白底素胚」，需自行彩繪上色<br>陶瓷品皆可客製吉祥物、造型，如有需要可來電洽詢<br>撲滿、筆筒、花盆、公仔、風鈴...皆可客製";
+			header = "紙類DIY專區";
+			paragraph = "部分商品可客製LOGO或圖案、造型，如有需要可來電洽詢<br>部分商品均以材料包方式出售，需自行上色、組裝";
 		break;
 		case "glass":
 			categoryname = "-玻璃類製品";
@@ -344,24 +347,39 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 		break;
 		case "soap":
 			categoryname = "-手工皂模/蠟燭";
+			header = "手工皂模/蠟燭DIY";
+			paragraph = "皂模均附封口貼紙一張，方便客人DIY並帶回使用<br>大量皂模可客製造型，歡迎來圖訂製";
+			
 		break;
 		case "fragrance":
 			categoryname = "-薰香專區";
+			header = "薰香DIY專區";
+			paragraph = "如需其他造型蝶谷巴特專用紙/模具可電洽或參考網頁<br>商品 擴香磚系列，均販售粉末材料包，如需擴香磚(半成品)可電洽";
 		break;
 		case "diy":
 			categoryname = "-DIY配件/工具";
+			header = "DIY配件/DIY工具";
+			paragraph = "木片、樹枝、貝殼等天然材料，尺寸正負1皆為正常現象<br>天然素材須充分乾燥";
 		break;
 		case "other":
 			categoryname = "-其他DIY";
+			header = "其他DIY";
+			paragraph = "本頁商品部分以材料包方式出售<br>如需其他成品、半成品DIY，歡迎聯絡我們！";
 		break;
 		case "custom":
 			categoryname = "-客製化專區";
+			header = "客製化專區";
+			paragraph = "本頁商品均為客製訂購品，需提前連絡、訂購<br>如需客製開發其他商品、造型可電洽";
 		break;
 		case "finished":
 			categoryname = "-成品/禮贈品專區";
+			header = "成品/禮贈品專區";
+			paragraph = "本頁商品均販售成品<br>如需其他特殊商品可來電洽詢";
 		break;
 		case "nature":
 			categoryname = "-桐花/螢火蟲季";
+			header = "";
+			paragraph = "部分商品為訂購品，需提前連絡、訂購<br>如需客製開發其他商品、造型可電洽";
 		break;
 		case "festival":
 			categoryname = "-中秋節DIY/端午節DIY";
