@@ -137,10 +137,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 								<li data-category="wood_craft" data-group="wood"><a href="products.html?wood_craft">精緻木作</a></li>
 								<li data-category="ceramic" data-group="ceramicmosaic"><a href="products.html?ceramic">彩繪陶瓷</a></li>
 								<li data-category="mosaic" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
-								<li data-category="nature" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
-								<li data-category="festival" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
-								<li data-category="holiday" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
-								<li data-category="newyears" data-group="ceramicmosaic"><a href="products.html?mosaic">馬賽克磚</a></li>
+								<li data-category="nature" data-group="fest"><a href="products.html?nature">桐花/螢火蟲季</a></li>
+								<li data-category="festival" data-group="fest"><a href="products.html?festival">中秋/端午節</a></li>
+								<li data-category="holiday" data-group="fest"><a href="products.html?holiday">聖誕/萬聖/復活節</a></li>
+								<li data-category="newyears" data-group="fest"><a href="products.html?newyears">新年/日式</a></li>
 							</ul>
 						</div>
 					</div>
@@ -380,15 +380,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made 
 			categoryname = "-桐花/螢火蟲季";
 			header = "";
 			paragraph = "部分商品為訂購品，需提前連絡、訂購<br>如需客製開發其他商品、造型可電洽";
+			grouptype = "fest";
 		break;
 		case "festival":
 			categoryname = "-中秋節DIY/端午節DIY";
+			grouptype = "fest";
 		break;
 		case "holiday":
 			categoryname = "-聖誕節DIY/萬聖節DIY/復活節DIY";
+			grouptype = "fest";
 		break;
 		case "newyears":
 			categoryname = "-新年/日式";
+			grouptype = "fest";
 		break;
 		}
 		
