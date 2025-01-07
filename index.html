@@ -64,7 +64,7 @@
 					<li><h7>超值專區</h7>
 							<ul style="columns: 1;">
 								<li><a href="index.html#products2">超值贈品</a></li>
-							  </ul>
+							</ul>
 					</li>
 					<li><h7>DIY類</h7>
 						<ul style="columns: 2;" >
@@ -123,7 +123,9 @@
 			<aside id="colorlib-hero" class="js-fullheight">
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
-				   	<li style="background-image: url(images/cover.png);background-position: top;">
+					<div class="parallaxnear1" style="background-image: url(images/LOGO.png);background-size:contain;height: 60%;width: 100%;position: absolute;top: 20%;z-index: 200;background-position: center;background-repeat: no-repeat;"></div>	
+				   	<li style="background-image: url(images/cover.png);background-position: top;background-size: cover;">
+						
 				   		<div class="overlay"></div>
 				   		<div class="container-fluid">
 				   			<div class="row">
@@ -335,6 +337,13 @@ window.addEventListener('scroll', () => {
   else{
 	sidebar.classList.add("closed");
   }
+//
+  	const scrollPosition = window.scrollY;
+        const parallaxLayer = document.querySelector(".parallaxnear1");
+        
+        // Adjust transform based on scroll
+        parallaxLayer.style.transform = `translateY(${scrollPosition * +0.2}px) scale(1)`;
+		
 });
 	</script>
 	<!-- Lightbox -->
