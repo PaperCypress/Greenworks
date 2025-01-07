@@ -61,6 +61,11 @@
 					<li><a href="contact.html">聯絡我們</a></li>
 					<li><a href="index.html#products">新品介紹</a></li>
 					<div id="productnav" style="height: 50vh;overflow-y: scroll;">
+					<li><h7>超值專區</h7>
+							<ul style="columns: 1;">
+								<li><a href="index.html#products2">超值贈品</a></li>
+							  </ul>
+					</li>
 					<li><h7>DIY類</h7>
 						<ul style="columns: 2;" >
 							<li><a href="products.html?bamboo">竹童玩</a></li>
@@ -118,7 +123,7 @@
 			<aside id="colorlib-hero" class="js-fullheight">
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
-				   	<li style="background-image: url(images/img_bg_1.jpg);">
+				   	<li style="background-image: url(images/cover.png);background-position: top;">
 				   		<div class="overlay"></div>
 				   		<div class="container-fluid">
 				   			<div class="row">
@@ -162,51 +167,6 @@
 										<div class="colorlib-text">
 											<h3>客製商品開發</h3>
 											<p>如有客製或特殊商品開發，敬請和我們連繫。</p>
-										</div>
-									</div>
-
-									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon" style="background-image: url(images/NEW.png);background-size: cover;">
-										</div>
-										<div class="colorlib-text">
-											<h3>清明連假</h3>
-											<p>2022/04/02(六)~2022/04/05(二)清明連假，將暫停服務，有需商品/服務請提早連絡力京！</p>
-										</div>
-									</div>
-
-									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon" style="background-image: url(images/NEW.png);background-size: cover;">
-										</div>
-										<div class="colorlib-text">
-											<h3>勞動節連假</h3>
-											<p>2022/04/30(六)~2022/05/02(一)為勞動節連假，將暫停服務，有需商品/服務請提早連絡力京！</p>
-										</div>
-									</div>
-
-									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon" style="background-image: url(images/NEW.png);background-size: cover;">
-										</div>
-										<div class="colorlib-text">
-											<h3>端午連假</h3>
-											<p>2022/06/03(五)~2022/06/05(一)為端午連假將暫停服務，有需商品/服務請提早連絡力京！</p>
-										</div>
-									</div>
-
-									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon" style="background-image: url(images/NEW.png);background-size: cover;">
-										</div>
-										<div class="colorlib-text">
-											<h3>中秋假期</h3>
-											<p>2022/09/09(六)~2022/09/11(日)為中秋假期將暫停服務，有需商品/服務請提早連絡力京！</p>
-										</div>
-									</div>
-
-									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon" style="background-image: url(images/NEW.png);background-size: cover;">
-										</div>
-										<div class="colorlib-text">
-											<h3>雙十假期</h3>
-											<p>2022/10/08(六)~2022/10/10(日)為雙十假期將暫停服務，有需商品/服務請提早連絡力京！ </p>
 										</div>
 									</div>
 
@@ -297,6 +257,25 @@
 				</div>
 			</div>
 
+			<div class="colorlib-blog">
+				<div class="colorlib-narrow-content" id="products2">
+					<div class="row">
+						<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<h2 class="colorlib-heading animate-box">超值贈品專區</h2>
+							<span class="heading-meta">限量出售，售完為止，實際數量可來電洽詢
+
+								<br>超值價格，恕無退換貨服務
+								</span>
+						</div>
+					</div>
+					
+
+					<div class="hidden" id="pagelist2">
+					</div>
+
+				</div>
+			</div>
+
 			<div id="get-in-touch" class="colorlib-bg-color">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -335,7 +314,8 @@
 	<script src="js/productlist.js"></script>
 
 	<script>
-		loadImages("new");
+		loadImages("new","products","pagelist");
+		loadImages("sale","products2","pagelist2");
 		function hasScrolledPast(element) {
   const rect = element.getBoundingClientRect();
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;

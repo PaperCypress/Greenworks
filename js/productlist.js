@@ -1,7 +1,7 @@
 
 
 // Function to load and parse the plaintext file
-async function loadImages(category) {
+async function loadImages(category,elementId,end) {
   //var category = 'A2'
   const filePath = `products/${category}.txt`;
   const filePath2 = `products/${category}info.txt`;
@@ -21,8 +21,8 @@ async function loadImages(category) {
     });
 
     // Populate the HTML
-    const container = document.getElementById('products');
-    const pages = document.getElementById("pagelist");
+    const container = document.getElementById(elementId);
+    const pages = document.getElementById(end);
     var count=0;
     let currentRow;
     images.forEach(image => {
