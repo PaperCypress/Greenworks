@@ -52,19 +52,18 @@
 	<body>
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight closed">
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<h1 id="colorlib-logo"><a href="index.html">力京實業</a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li><a href="index.html#news">最新消息</a></li>
 					<li><a href="index.html#about">關於我們</a></li>
 					<li><a href="contact.html">聯絡我們</a></li>
-					<li><a href="index.html#order">訂購專區</a></li>
 					<div id="productnav" style="height: 50vh;overflow-y: scroll;">
 					<li><h7>特殊專區</h7>
 							<ul style="columns: 2;">
 								<li><a href="index.html#products">新品介紹</a></li>
-								<li><a href="index.html#products2">超值贈品</a></li>
+								<li><a href="index.html#products2">超值專區</a></li>
 							</ul>
 					</li>
 					<li><h7>DIY類</h7>
@@ -253,7 +252,7 @@
 
 				</div>
 			</div>
-			<div class="colorlib-blog">
+			<!--<div class="colorlib-blog">
 				<div class="colorlib-narrow-content" id="order">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -328,7 +327,7 @@
 	
 					</div>
 				</div>
-			</div>
+			</div>!-->
 
 			<div id="get-in-touch" class="colorlib-bg-color">
 				<div class="colorlib-narrow-content">
@@ -383,15 +382,16 @@
 
 const target = document.getElementsByClassName('colorlib-services')[0];
 const sidebar = document.getElementById('colorlib-aside');
-window.addEventListener('scroll', () => {
-  if (hasScrolledPast(target)) {
-	sidebar.classList.remove("closed");
-    
 
-  }
-  else{
-	sidebar.classList.add("closed");
-  }
+		// window.addEventListener('scroll', () => {
+		// if (hasScrolledPast(target)) {
+		// 	sidebar.classList.remove("closed");
+			
+
+		// }
+		// else{
+		// 	sidebar.classList.add("closed");
+		// }
 //
   	const scrollPosition = window.scrollY;
         const parallaxLayer = document.querySelector(".parallaxnear1");

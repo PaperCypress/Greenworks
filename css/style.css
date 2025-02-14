@@ -693,7 +693,7 @@ body.offcanvas {
   text-transform: uppercase; }
 
 .blog-entry {
-  width: 100%;
+
   float: left;
   background: #fff;
   margin-bottom: 3em; }
@@ -743,7 +743,7 @@ body.offcanvas {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #000; }
-  .blog-entry:hover .blog-img img {
+  .blog-img:hover  img {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);

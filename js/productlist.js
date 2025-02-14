@@ -16,8 +16,8 @@ async function loadImages(category,elementId,end) {
     // Split lines and parse each line
     const lines = text.split('\n').filter(line => line.trim() !== '');
     const images = lines.map(line => {
-      const [name, path, info] = line.split('|');
-      return { name: name.trim(), path: path.trim(), info: info.trim() };
+      const [name, path, info, vid] = line.split('|');
+      return { name: name.trim(), path: path.trim(), info: info?.trim(), vid: vid?.trim() };
     });
 
     // Populate the HTML
@@ -25,6 +25,7 @@ async function loadImages(category,elementId,end) {
     const pages = document.getElementById(end);
     var count=0;
     let currentRow;
+    let imghide;
     images.forEach(image => {
       if(image.name=="header"){
         const newBlock = document.createElement("div");  
@@ -40,8 +41,14 @@ async function loadImages(category,elementId,end) {
       count = 0;
       }
       else{
-        
-      
+        console.log(image.vid);
+        if(!image.vid){
+          console.log("no link");
+          imghide="display:none;";
+        }
+        else{
+          imghide="";
+        }
       const newBlock = document.createElement("div");
       newBlock.className = "col-md-2 col-sm-6 animate-box";
       newBlock.setAttribute("data-animate-effect", "fadeInLeft");
@@ -53,7 +60,11 @@ async function loadImages(category,elementId,end) {
             <img src="images/${category}/${image.path}" class="img-responsive" alt="${image.name}">
           </a>
           <div class="desc">
-            <h3>${image.name}</h3>
+            <h3  style="position: relative;">${image.name}
+            <a href="${image.vid}" target="_blank" style="position: absolute; right: 0; bottom: 0;${imghide}">
+										<img src="images/play-button.png" alt="icon" style="width: 20px; height: 20px;">
+						</a>
+            </h3>
           </div>
         </div>
       `;
