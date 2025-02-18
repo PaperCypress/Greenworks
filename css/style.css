@@ -163,7 +163,12 @@ figure {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
         background-color: #F7E6C6;
       }
-
+      #productnav{
+        height: 50vh;
+      }    
+      #mainnav{
+        columns: 1;
+      }
   #colorlib-aside #colorlib-main-menu ul {
     height: 100%;
     text-align: center;
@@ -171,8 +176,14 @@ figure {
     padding: 0; }
 
     @media screen and (max-width: 768px) {
+      #productnav{
+        height: 40vh;
+      }  
+      #mainnav{
+        columns: 2;
+      }
       #colorlib-aside #colorlib-main-menu ul {
-        margin: 0 0 2em 0; } }
+        margin: 0 0 1em 0; } }
     #colorlib-aside #colorlib-main-menu ul li {
       margin: 0 0 10px 0;
       padding: 0;
