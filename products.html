@@ -66,7 +66,7 @@
 					<li><h7>特殊專區</h7>
 							<ul style="columns: 2;">
 								<li><a href="index.html#products">新品介紹</a></li>
-								<li><a href="index.html#products2">超值贈品</a></li>
+								<li><a href="index.html#products2">超值專區</a></li>
 							</ul>
 					</li>
 					<li><h7>DIY類</h7>
@@ -273,7 +273,7 @@
 		let paragraph = "";
 		let grouptype = "";
 		queryString = queryString.substring(1);
-		loadImages(queryString,"products","pagelist");
+		loadImages(queryString,"products","pagelist","description");
 		switch(queryString){
 		case "bamboo":
 			categoryname = "-竹童玩";
@@ -421,7 +421,7 @@
 		case "chain":
 			categoryname = "-成品類";
 			header = "吊飾";
-			paragraph = "本頁商品皆為訂購品，需提前連絡、訂購<br>如需客製開發其他商品、造型可電洽";
+			paragraph = "本頁商品皆為訂購品，需提前連絡、訂購<br>";
 			//歡迎點選播放按鈕，觀看產品介紹影片!
 			
 		break;

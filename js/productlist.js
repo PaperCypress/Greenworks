@@ -1,7 +1,7 @@
 
 
 // Function to load and parse the plaintext file
-async function loadImages(category,elementId,end) {
+async function loadImages(category,elementId,end,maininfoid) {
   //var category = 'A2'
   const filePath = `products/${category}.txt`;
   const filePath2 = `products/${category}info.txt`;
@@ -25,20 +25,35 @@ async function loadImages(category,elementId,end) {
     const pages = document.getElementById(end);
     var count=0;
     let currentRow;
-    let imghide;
+    let imghide;let infohide;
     images.forEach(image => {
       if(image.name=="header"){
+        if(!image.info){
+          infohide="display:none;";
+        }
+        else{
+          infohide="";
+        }
         const newBlock = document.createElement("div");  
         newBlock.className = "row";
         newBlock.innerHTML = `
         <div class="col-md-8 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							
 							<h2 class="colorlib-heading">${image.path}</h2>
+              <span class="heading-meta" id="description" style="${infohide}">${image.info}</span>
 						</div>
       `;
       container.appendChild(newBlock);
       container.insertBefore(newBlock,pages);
       count = 0;
+      }
+      else if(image.name=="info"){
+
+        const maininfo = document.getElementById(maininfoid);
+        if(maininfo){
+          maininfo.innerHTML=image.path;
+        }
+        
       }
       else{
         console.log(image.vid);
